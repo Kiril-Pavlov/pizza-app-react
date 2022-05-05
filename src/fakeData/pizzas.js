@@ -3,32 +3,55 @@ export const pizzaProducts = [
     id: "1",
     name: "Capricciosa",
     image:
-      "https://images.pexels.com/photos/1260968/pexels-photo-1260968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    priceSmall: 250,
-    priceBig: 350,
+      "https://i0.wp.com/costarica.mk/wp-content/uploads/2020/09/Capri.jpg?w=500&ssl=1",
+    priceSmall: 350,
+    priceBig: 450,
+    tags: ["house-speciality", "vege", "discount", "promo"],
+    ingredients:
+      "доматен сос, кашкавал, печурки, шунка, оригано",
+  },
+  {
+    id: "2",
+    name: "Бургер пица",
+    image:
+      "https://i0.wp.com/costarica.mk/wp-content/uploads/2021/11/burger-pizza.png?fit=800%2C800&ssl=1",
+    priceSmall: 370,
+    priceBig: 550,
     tags: ["house-speciality", "vege", "discount", "promo"],
     ingredients:
       "моцарела, чедар, телешко месо, краставички, кромид, домати, бургер сос",
   },
   {
-    id: "2",
-    name: "Americana",
-    image:
-      "https://images.pexels.com/photos/1146760/pexels-photo-1146760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    price: 150,
-  },
-  {
     id: "3",
-    name: "Napolitana",
+    name: "Рукола",
     image:
-      "https://images.pexels.com/photos/367915/pexels-photo-367915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    price: 350,
+      "https://i0.wp.com/costarica.mk/wp-content/uploads/2020/09/Rocket.jpg?w=500&ssl=1",
+    priceSmall: 420,
+    priceBig: 550,
+    tags: ["house-speciality", "vege", "discount", "promo"],
+    ingredients:
+      "доматен сос, моцарела, рукола, пршута, оригано, шери домати",
   },
   {
     id: "4",
-    name: "Makedonska",
+    name: "Македонска",
     image:
-      "https://images.pexels.com/photos/2271196/pexels-photo-2271196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    price: 450,
+      "https://i0.wp.com/costarica.mk/wp-content/uploads/2020/09/Macedonian.jpg?w=500&ssl=1",
+    priceSmall: 370,
+    priceBig: 470,
+    tags: ["house-speciality", "vege", "discount", "promo"],
+    ingredients:
+      "доматен сос, кашкавал, печурки, домат, сланина, пиперки, сирење, оригано",
   },
+  {
+    id: "5",
+    name: "Костарика пица",
+    image:
+      "https://i0.wp.com/costarica.mk/wp-content/uploads/2020/09/Costaricapizza.jpg?w=500&ssl=1",
+    priceSmall: 430,
+    priceBig: 570,
+    tags: ["house-speciality", "vege", "discount", "promo"],
+    ingredients:
+    "доматен сос, кашкавал, печурки, шунка, маслинки, свински врат, кулен, павлака, оригано, сусам",
+  }
 ];

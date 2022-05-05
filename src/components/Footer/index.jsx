@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       
-      <p>
+      <p style={{ background: '#222', padding: '10px', color: 'white' }}>
         Copyright @{new Date().getFullYear()}
       </p>
     </footer>

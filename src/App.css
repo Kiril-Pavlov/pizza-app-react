@@ -1,50 +1,87 @@
-*{
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+body{
+  background-color: #1D2322;;
+}
+nav{
+  background-color: #00ada4;
+  padding: 20px;
+  color: #f7f7f7;
 }
 
-:root{
-  --dark: black;
-  --light: white;
-
-  --secondary: #333333;
+nav a{
+  color: #f7f7f7;
+  text-decoration: none;
 }
 
-#root{
-  background-color: var(--dark);
-  color: white;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.pizzas-container{
+#pizzaMenu{
   display: flex;
-  flex-wrap: wrap;
-  grid-gap: 30px;
-  width: 80%;
-  margin: 20px 10%;
   justify-content: center;
-  background-color: var(--secondary);
-
+  width: 100%;
 }
 
-.pizza-item{
-    width: 300px;
-    text-align: center;
-    overflow: hidden;
-    padding: 10px;
-
-
-}
-
-.pizza-item img{
-  width: 200px;
-  height: 200px;
-}
-
-footer p{
-  background-color: var(--dark);
-  color: var(--light);
+.product{
+  position: relative;
+  display: inline-block;
+  width: 22%;
   text-align: center;
+  height: 500px;
+}
+
+.product img{
+    width: 90%;
+    height: 60%;
+}
+.product h2{
+  color: white;
+}
+
+.product button{
+  border: none;
   padding: 10px;
+}
+
+.product p{
+  height: 60px;
+  color: #f7f7f7;
+}
+
+.priceTag{
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  background-color: #ffc600;
+  color: #f7f7f7;
+  width: 180px;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: normal;
+}
+.productDetails{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  color: #f7f7f7;
+}
+
+.quantitySelector{
+  background-color: white;
+  width: 60px;
+  color: black;
+  font-size: x-large;
+  border-radius: 10px;
+  padding: 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#order{
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  margin: 5px;
+  vertical-align: middle;
+  background-color: #00ada4;
+  color: #f7f7f7;
+  font-weight: bold;
 }

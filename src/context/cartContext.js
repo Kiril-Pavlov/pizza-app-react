@@ -1,19 +1,40 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 import { Navigate } from "react-router";
 import { pizzaProducts } from "../fakeData/pizzas";
+import ordering from "../pizzaordering/ordering";
 
 const CartContext = createContext();
 
-
 const CartProvider = ({ children }) => {
+  // useEffect(function(){
+  //     axios.get('backednURL').then(pizzas => setPizzaProducts(pizzas))
+  // },[])
   const [cartItems, setCartItems] = useState([]);
-  const addToCart = (id) => {
-    const pizzaToAdd = pizzaProducts.find((pizza) => pizza.id === id);
-    const pizzaCartItems = [pizzaToAdd, ...cartItems];
-    setCartItems(pizzaCartItems);
+  const addToCart = (id, quantity, selectedPizzaSize) => {
+    let newPizzaArray = ordering.addPizzaToCart(id, quantity, selectedPizzaSize, cartItems, pizzaProducts);
+    setCartItems(newPizzaArray);
   };
 
-  const value = { pizzaProducts, cartItems, addToCart };
+  const removeFromCart = (id, selectedPizzaSize) => {
+    let newPizzaArray = ordering.removePizzaFromCart(id, selectedPizzaSize, cartItems);
+    setCartItems(newPizzaArray);
+  };
+
+  // removeFromCart()
+  // order
+
+  // order(){
+  //   // console.log()
+  //   axios.post('bekendURL', {
+  //     data: {
+  //       cartItems
+  //     }
+  //   })
+
+  //   setCartItems([])
+  // }
+
+  const value = { pizzaProducts, cartItems, addToCart, removeFromCart };
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
 

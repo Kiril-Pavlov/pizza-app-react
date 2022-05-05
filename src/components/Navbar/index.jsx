@@ -19,11 +19,6 @@ const Navbar = () => {
           Contact
         </div>
       </Link>
-      <Link to='cart'>
-        <div>
-          CART
-        </div>
-      </Link>
     </nav>
   )
 }
