@@ -14,6 +14,7 @@ nav a{
 
 #pizzaMenu{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 }
@@ -21,14 +22,14 @@ nav a{
 .product{
   position: relative;
   display: inline-block;
-  width: 22%;
+  width: 300px;
   text-align: center;
   height: 500px;
 }
 
 .product img{
-    width: 90%;
-    height: 60%;
+    width: 200px;
+    height: 200px;
 }
 .product h2{
   color: white;
