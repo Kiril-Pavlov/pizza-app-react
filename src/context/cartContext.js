@@ -20,6 +20,10 @@ const CartProvider = ({ children }) => {
     setCartItems(newPizzaArray);
   };
 
+  const emptyCart = () => {
+    setCartItems([])
+  }
+
   // removeFromCart()
   // order
 
@@ -34,7 +38,7 @@ const CartProvider = ({ children }) => {
   //   setCartItems([])
   // }
 
-  const value = { pizzaProducts, cartItems, addToCart, removeFromCart };
+  const value = { pizzaProducts, cartItems, addToCart, removeFromCart, emptyCart };
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
 
