@@ -10,7 +10,7 @@ const HomePage = () => {
       {pizzaProducts.map(pizza => (
         <div key={pizza.id} className="product">
           <div className='priceTag'>
-            {pizza.priceSmall} ден - {pizza.priceBig} ден
+            {pizza.priceSmall} ден. - {pizza.priceBig} ден.
           </div>
           <Link to={pizza.name}>
           <img src={pizza.image} alt={pizza.name} />
@@ -22,6 +22,7 @@ const HomePage = () => {
           </Link>
         </div>
       ))}
+      
 
 
     </div>
