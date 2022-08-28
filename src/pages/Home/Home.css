@@ -1,0 +1,78 @@
+.pizzas-container{
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 10%;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.pizza-item{
+    background-color: var(--dark-color);
+    width: 300px;
+    height: 510px;
+    padding: 10px;
+    border: 3px solid var(--primary-color);
+    border-radius: 15px;
+}
+
+.price-tag{
+    background-color: var(--primary-color);
+    color: black;
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 3px 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.pizza-item img{
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin: 10px auto;
+}
+
+.pizza-item-name{
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.pizza-item-ingredients{
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-style: italic;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.pizza-item-button-link{
+    text-decoration: none;
+}
+
+.pizza-item-button{
+    background-color: var(--primary-color);
+    padding: 5px 20px;
+    display: block;
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    transition: all .5s;
+}
+
+.pizza-item-button:hover{
+    background-color: white;
+    border: 3px solid var(--primary-color);
+    padding: 5px 30px;
+}
+
