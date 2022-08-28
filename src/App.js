@@ -1,13 +1,13 @@
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router";
 import Home from "./pages/Home/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import Pizza from "./components/Pizza/Pizza";
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import About from "./pages/About/About";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (

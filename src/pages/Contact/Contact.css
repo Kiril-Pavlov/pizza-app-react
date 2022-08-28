@@ -1,0 +1,11 @@
+.contact-container{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--primary-color);
+    grid-gap: 20px;
+    margin: 30px auto;
+}
