@@ -1,0 +1,8 @@
+.header-logo{
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 4rem;
+    text-align: center;
+    color: var(--primary-color);
+    font-style: italic;
+    padding: 20px;
+}

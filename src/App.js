@@ -7,11 +7,13 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Pizza from "./components/Pizza/Pizza";
 import Cart from "./components/Cart/Cart";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div className="App">
-       <Cart />
+      <Cart />
+      <Header />
       <Navbar />
       <Routes>
         <Route path="pizza" element={<Home />}></Route>
