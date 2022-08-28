@@ -1,0 +1,78 @@
+
+
+
+
+.cart-open-background{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 10;
+}
+
+.cart-closed{
+    position: fixed;
+    right: 0px;
+    top: 200px;
+    background-color: var(--dark-color);
+    padding: 10px 20px;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 20px 0px 0px 20px;
+    z-index: 20;
+    border: 3px solid orange;
+    cursor: pointer;
+}
+
+.content-closed{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+span{
+    background-color: red;
+    border-radius: 10px;
+    padding: 1px 8px;
+    margin-left: 10px;
+    color: white;
+    right: 0px;
+}
+
+.cart-opened{
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 10px 0px;
+    width: 300px;
+}
+
+.cart-pizza-name{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-pizza-selected-size{
+    color: white;
+    font-style: italic;
+}
+
+.cart-order-button{
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px auto 0px auto;
+    display: block;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.cart-order-button:hover{
+    background-color: white;
+    border: 3px solid var(--primary-color);
+    padding: 5px 20px;
+
+}

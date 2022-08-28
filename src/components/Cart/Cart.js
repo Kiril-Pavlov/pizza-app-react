@@ -2,6 +2,8 @@ import React, { useContext, useState, useRef } from "react";
 import { useClickOutside } from "../../hooks/useClickOutside";
 import { CartContext } from "../../context/cartContext";
 
+import "./Cart.css"
+
 const Cart = () => {
   const { cartItems, removeFromCart, emptyCart } = useContext(CartContext);
   console.log(cartItems);
@@ -28,40 +30,22 @@ const Cart = () => {
       alert("Fala sto kupuvate kaj nas");
     }, 1000);
   }
-
+  console.log(cartItems);
   return (
     <div>
       {isOpen && (
-        <div
-          className="test"
-          style={{
-            position: "fixed",
-            width: "100vw",
-            height: "100vh",
-            backgroundColor: `rgba(0,0,0,0.4)`,
-            zIndex: 10,
-          }}
-        ></div>
+        <div className="cart-open-background"></div>
       )}
       <div
         ref={cartRef}
-        style={{
-          position: "absolute",
-          top: 20,
-          right: 20,
-          padding: 20,
-          zIndex: 20,
-          backgroundColor: "white",
-          border: "1px solid black",
-        }}
-      >
+        className="cart-closed">
         <div
           onClick={() => {
             setIsOpen(!isOpen);
           }}
+          className="content-closed"
         >
-          {" "}
-          Cart {cartItems.length && cartItems.length}
+          Cart <span>{cartItems.length && cartItems.length}</span>
         </div>
 
         <div
@@ -70,8 +54,8 @@ const Cart = () => {
           }}
         >
           {cartItems.map((pizza) => (
-            <div key={pizza.id + pizza.selectedPizzaSize}>
-              <h2>
+            <div key={pizza.id + pizza.selectedPizzaSize} className="cart-opened">
+              <h2 className="cart-pizza-name">
                 {pizza.name}{" "}
                 <button
                   onClick={() =>
@@ -81,25 +65,28 @@ const Cart = () => {
                   ❌
                 </button>
               </h2>
-              <h2>{pizza.selectedPizzaSize}</h2>
+              <p className="cart-pizza-selected-size">Size: {pizza.selectedPizzaSize}</p>
               <div>
                 {pizza.selectedPizzaSize === "мала" &&
-                  "Price:" +
-                    pizza.priceSmall * pizza.quantity +
-                    "den  -  " +
-                    pizza.quantity}
+                  "Price: " +
+                  pizza.priceSmall +
+                  "den.  * " +
+                  pizza.quantity}
               </div>
               <div>
                 {pizza.selectedPizzaSize === "голема" &&
-                  "Price" +
-                    pizza.priceBig * pizza.quantity +
-                    "den  -  " +
-                    pizza.quantity}
+                  "Price: " +
+                  pizza.priceBig +
+                  "den.  * " +
+                  pizza.quantity}
               </div>
             </div>
           ))}
 
-          <button onClick={handleOrder}>Order all</button>
+          {/* <div className="cart-total-price">
+            {cartItems.reduce((total,item)=total+(item.priceBig*item.quantity),0}
+          </div> */}
+          <button onClick={handleOrder} className="cart-order-button">Order all</button>
         </div>
       </div>
     </div>
