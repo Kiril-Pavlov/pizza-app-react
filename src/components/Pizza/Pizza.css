@@ -1,0 +1,112 @@
+.pizza-page-container{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    display: flex;
+    grid-gap: 20px;
+    margin: 30px auto;
+    
+}
+
+.pizza-page-image{
+    width: 50%;
+    display: flex;
+}
+
+.pizza-page-image img{
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.pizza-page-content{
+    width: 50%;
+    padding: 20px;
+}
+
+.pizza-page-title{
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.pizza-page-ingredients{
+    color: white;
+    font-style: italic;
+    padding: 10px 0px;
+}
+
+.pizza-page-prices{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.pizza-page-size{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 10px 0px;
+}
+
+.pizza-page-size-buttons button{
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 3px 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    margin: 0px 10px;
+    transition: all 0.5s;
+}
+
+.pizza-page-size-buttons button:hover{
+    background-color: white;
+    border: 2px solid transparent;
+    color: black;
+}
+
+.pizza-page-price-selected{
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 0px;
+}
+
+.pizza-page-quantity-text{
+    background-color: transparent;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 0px;
+}
+
+.pizza-page-counter-value{
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.pizza-page-buy-button{
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 0px;
+    display: block;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 900px) {
+    .pizza-page-container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .pizza-page-image{
+        width: 100%;
+    }
+    
+    
+    .pizza-page-content{
+        width: 100%;
+    }
+}
